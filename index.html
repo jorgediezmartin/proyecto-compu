@@ -1,0 +1,64 @@
+<html>
+  <head>
+   <style>
+  footer {
+            position: relative;
+            /* Altura total del footer en px con valor negativo */
+            margin-top: 200px;
+            /* Altura del footer en px. Se han restado los 5px del margen
+               superior mas los 5px del margen inferior
+            */
+            height: 50px;
+            padding:5px 20px;
+            clear: both;
+            text-align: center;
+            color: #fff;
+        }
+     </style>
+    <center>
+      <h1 style="color: #F50B0B;">P&aacute;gina para ver cotizaciones a tiempo real!</h1>
+      </center>
+  </head>
+
+<body background="http://i.vimeocdn.com/video/479680261_1280x720.jpg">
+
+
+<META HTTP-EQUIV="REFRESH" CONTENT="120;URL=/index.html">
+
+
+<center>
+<h2   style="color: #FBF9F9;">El valor de la Cotizaci&oacute;n en ABERTIS es:<b style="color: #FF5733  ;">{{ valor }}</b> a las {{ hora }} del {{ fecha }} </h2>
+
+</center>
+
+<form action="/umbrales.html" method="get">
+    <label for="nombre" style="color: #FBF9F9;"><FONT SIZE=5>Escribe umbral en %:</font></label>
+    
+    <input type="text" id="nombre" name="nombre"><br/>
+    <input  type="submit" value="Enviar" />
+</form>
+
+<center>
+<p><form action="/valormedio.html" method="get">
+    <input type="submit" value="Valor medio" />
+</form>
+</p>
+
+<form action="/graficas.html" method="get">
+    <input type="submit" value="Visualizar Graficas" />
+</form>
+</center>
+
+
+<footer>  
+  <center>
+    <img src="https://lh3.googleusercontent.com/PkvocFfa1T5C2V4x7hl3HT7rgmArCD8xzKtNWjn5zUqjI34nbat2cG2J-O8FUNOXQdt-_L0=s170">
+  </center>
+</footer>
+
+
+
+</body>
+
+</html>
+
