@@ -1,0 +1,83 @@
+
+<html>
+
+<head>
+     <style>
+        footer {
+                position: relative;
+                /* Altura total del footer en px con valor negativo */
+                margin-top: 170px;
+                /* Altura del footer en px. Se han restado los 5px del margen
+               superior mas los 5px del margen inferior
+                */
+                height: 50px;
+                padding:5px 20px;
+                clear: both;
+                text-align: center;
+                color: #fff;
+                }
+     </style>
+</head>
+
+<body>
+<script>
+function myFunction() {
+    alert("Se ha superado el umbral!!!!");
+}
+</script>
+
+<script>
+if ({{flag}} == 1) {
+    myFunction();
+}
+</script>
+<center>
+<h1 style="color: #5e9ca0;"> P&aacute;gina comparaci&oacute;n de Umbrales</h1>
+</center>
+<META HTTP-EQUIV="REFRESH" CONTENT="120;URL=/pagina2.html?{{nombre}}">
+
+
+<center>
+<h1>Tabla Umbral</h1>
+<table  border="2px">
+ <tr>
+    <th scope="col">Umbral</th>
+    <th scope="col">Valor actual</th>
+    <th scope="col">Valor inicial</th>
+    <th scope="col">Valor a comparar</th>
+  </tr>
+ 
+  <tr>
+  
+    <td align=center>{{ nombre }}</td>
+    <td align=center> {{ primervalor }}</td>
+    <td align=center>{{ ultimovalor }}</td>
+    <td align=center>{{ comparar }}</td>
+  </tr>
+ 
+</table>
+
+
+<p>Usted ha seleccionado el umbral: <b style="color: #FF5733  ;"> {{ nombre }} %</b></p>
+<p>El porcentaje sobre el valor inicial {{ primervalor}} es : <b style="color: #FF5733  ;">{{porcentaje}}</b></p>
+
+
+
+
+ <p>Si las cotizaciones superan este valor: <b style="color: #FF5733  ;">{{ comparar }}</b> saltar&aacute; un aviso </p>
+
+<form action="/index.html" method="get">
+
+    <input type="submit" value="Volver atras" />
+</form>
+
+</center>
+
+ <footer>  
+  <center>
+    <img src="https://lh3.googleusercontent.com/Yngdr_rc8h7I4IEIe-gVBWl9kFhuoJwtTBAYEsiJHV_LzgNPZVn3-PQiAEwZUjPZSa93gQ=s170">
+  </center>
+</footer>
+ 
+</body>
+</html>

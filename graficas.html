@@ -1,0 +1,45 @@
+<html>
+  <head>
+   <style>
+  footer {
+            position: relative;
+            /* Altura total del footer en px con valor negativo */
+            margin-top: 165px;
+            /* Altura del footer en px. Se han restado los 5px del margen
+               superior mas los 5px del margen inferior
+            */
+            height: 60px;
+            padding:5px 20px;
+            clear: both;
+            text-align: center;
+            color: #fff;
+        }
+     </style>
+     
+  </head>
+
+<body>
+<center>
+<h1 style="color: #5e9ca0;">Gr&aacute;fica de los valores de las <span style="color: #2b2301;">cotizaciones</span> de ABERTIS</h1>
+</center> 
+<img src="http://stmedia.bolsamania.com/web/img/images_uploaded/2/0/abertis632x175.jpg">
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/184830/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"></iframe>
+<center>
+
+<h2   style="color: #000505;">El valor de la Cotizaci&oacute;n en ABERTIS es:<b style="color: #FF5733  ;">{{ valor }}</b> a las {{ hora }} del {{ fecha }} </h2>
+
+<form action="/index.html" method="get">
+
+    <input type="submit" value="Volver atras" />
+</form>
+</center>
+
+
+<footer>  
+  <center>
+    <img src="https://lh3.googleusercontent.com/Yngdr_rc8h7I4IEIe-gVBWl9kFhuoJwtTBAYEsiJHV_LzgNPZVn3-PQiAEwZUjPZSa93gQ=s170">
+  </center>
+</footer>
+</body>
+
+

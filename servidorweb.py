@@ -97,8 +97,8 @@ def valormedio():
   return render_template('valormedio.html',media=media)
 
 @app.route('/graficas.html')  
-def graficas():
-  return render_template('graficas.html')
+def graficas(valor=m,fecha=z,hora=s):
+  return render_template('graficas.html',valor=valor,fecha=fecha,hora=hora)
 #    
 #   try:
 #        nombre = request.args.get('nombre') 

@@ -41,24 +41,24 @@ while(True):
 
 	to_wait  = -(time.time()%120) + 120
 	time.sleep(to_wait)
-
 	response = urllib2.urlopen('http://www.bolsamadrid.es/esp/aspx/Mercados/Precios.aspx?indice=ESI100000000')
-
 	# Get all data
 	html = response.read()
   
 
 
 
-        # Expresiones regulares, primera busqueda 
+# Expresiones regulares, primera busqueda 
 	abertis=re.search('ABERTIS</a></td><td>([0-9]{1,6}\,[0-9]{1,6}).*[0-9]{1,2}\:[0-9]{1,2}',html)
 	j=abertis.group(0)
+#	print j
+ 
   #j=j.replace(',','.')
 	#Sub-busqueda del valor de la cotizacion
 	abertisv=re.search('([0-9]{1,6}\,[0-9]{1,6})',j)
-  #abertisv=re.search('([0-9]{1,6}\.[0-9]{1,6}))',j)
 	v=abertisv.group(0)
 	v=v.replace(',','.') 
+   #abertisv=re.search('([0-9]{1,6}\.[0-9]{1,6}))',j)
 	urllib2.urlopen('https://api.thingspeak.com/update?api_key=63UT1JTLSUL0KV68&field1='+ str(v))
   #https://api.thingspeak.com/update?api_key=63UT1JTLSUL0KV68&field1=v
   
